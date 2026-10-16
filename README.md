@@ -27,5 +27,5 @@ This project explores the Titanic passenger dataset to study factors associated 
 
 ## Author
 
-Maintained by Mnvndr.
+Designed by Mnvndr.
 
