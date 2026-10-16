@@ -1,5 +1,4 @@
 # TitanicSurvivalAnalysis
-# Titanic Survival Analysis
 
 ## Project Overview
 
