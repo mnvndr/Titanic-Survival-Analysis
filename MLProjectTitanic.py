@@ -966,6 +966,15 @@ from sklearn.metrics import accuracy_score
 #------------------------------------------
 from sklearn.linear_model import LogisticRegression
 logreg = LogisticRegression()
+
+print("Training data shape:", x_train.shape)
+print("Missing values per column:")
+print(x_train.isnull().sum()[x_train.isnull().sum() > 0])
+print("Missing values:", x_train.isnull().sum().sum())
+print("Columns:", x_train.columns.tolist())
+print(x_train.isnull().sum())
+x_train = x_train.fillna(x_train.median(numeric_only=True))
+x_val = x_val.fillna(x_train.median(numeric_only=True))
 logreg.fit(x_train, y_train)
 y_pred = logreg.predict(x_val)
 acc_logreg = round(accuracy_score(y_pred, y_val) * 100, 2)
